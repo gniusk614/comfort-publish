@@ -5,7 +5,9 @@ $(function () {
   var $hoverQuickMenu = $("#hoverQuickMenu");
   var $sec2Tabs = $("#sec2Tabs");
   var $sec2Image = $("#sec2 .dul-2371");
+  var $sec2MainTitleMarquee = $("#sec2MainTitleMarquee");
   var $sec2MainTitle = $("#sec2MainTitle");
+  var $sec2MainTitleClone = $("#sec2MainTitleClone");
   var $sec2ServiceTitle = $("#sec2ServiceTitle");
   var $sec2ServiceDesc = $("#sec2ServiceDesc");
   var $sec7Track = $("#sec7Track");
@@ -82,9 +84,13 @@ $(function () {
     }
 
     $sec2MainTitle.text(tabData.mainTitle);
+    $sec2MainTitleClone.text(tabData.mainTitle);
     $sec2ServiceTitle.text(tabData.serviceTitle);
     $sec2ServiceDesc.text(tabData.serviceDesc);
     $sec2Image.css("background-image", 'url("' + tabData.image + '")');
+    $sec2MainTitleMarquee.css("animation", "none");
+    $sec2MainTitleMarquee[0].offsetHeight;
+    $sec2MainTitleMarquee.css("animation", "");
 
     $sec2Tabs.find("li").removeClass("is-active");
     $sec2Tabs.find('button[data-tab="' + tabKey + '"]').closest("li").addClass("is-active");
