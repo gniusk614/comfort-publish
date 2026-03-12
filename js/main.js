@@ -10,8 +10,9 @@ $(function () {
   var $sec2MainTitleClone = $("#sec2MainTitleClone");
   var $sec2ServiceTitle = $("#sec2ServiceTitle");
   var $sec2ServiceDesc = $("#sec2ServiceDesc");
+  var $sec7Carousel = $("#sec7Carousel");
   var $sec7Track = $("#sec7Track");
-  var $sec7Cards = $sec7Track.find(".sec7-result-card");
+  var $sec7Cards = $();
   var $sec7Prev = $("#sec7Prev");
   var $sec7Next = $("#sec7Next");
   var sec7CarouselIndex = 0;
@@ -64,6 +65,167 @@ $(function () {
       "스킨보톡스"
     ]
   };
+  var sec7FallbackResults = [
+    {
+      round: "[손가락] 5회차",
+      caption: "시술 후 4개월 경과",
+      beforeImageUrl: "./assets/images/main/DUL_2346 copy.png",
+      beforePosition: "34% center",
+      afterImageUrl: "./assets/images/main/sec2-dul-2371.png",
+      afterPosition: "58% center"
+    },
+    {
+      round: "[팔] 3회차",
+      caption: "시술 후 2개월 경과",
+      beforeImageUrl: "./assets/images/main/sec2-dul-2371.png",
+      beforePosition: "28% center",
+      afterImageUrl: "./assets/images/main/DUL_2346 copy.png",
+      afterPosition: "66% center"
+    },
+    {
+      round: "[눈썹] 2회차",
+      caption: "시술 후 1개월 경과",
+      beforeImageUrl: "./assets/images/main/DUL_2346 copy.png",
+      beforePosition: "48% 20%",
+      afterImageUrl: "./assets/images/main/sec2-dul-2371.png",
+      afterPosition: "42% 30%"
+    },
+    {
+      round: "[반영구] 4회차",
+      caption: "시술 후 3개월 경과",
+      beforeImageUrl: "./assets/images/main/sec2-dul-2371.png",
+      beforePosition: "74% center",
+      afterImageUrl: "./assets/images/main/DUL_2346 copy.png",
+      afterPosition: "44% center"
+    }
+  ];
+
+  function escapeHtml(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function readImageField(item, key) {
+    if (item[key]) {
+      return item[key];
+    }
+
+    if (item[key === "beforeImageUrl" ? "beforeImage" : "afterImage"]) {
+      return item[key === "beforeImageUrl" ? "beforeImage" : "afterImage"];
+    }
+
+    if (key === "beforeImageUrl" && item.before && item.before.imageUrl) {
+      return item.before.imageUrl;
+    }
+
+    if (key === "afterImageUrl" && item.after && item.after.imageUrl) {
+      return item.after.imageUrl;
+    }
+
+    return "";
+  }
+
+  function readPositionField(item, key, fallback) {
+    if (item[key]) {
+      return item[key];
+    }
+
+    if (key === "beforePosition" && item.before && item.before.position) {
+      return item.before.position;
+    }
+
+    if (key === "afterPosition" && item.after && item.after.position) {
+      return item.after.position;
+    }
+
+    return fallback;
+  }
+
+  function normalizeSec7Results(payload) {
+    var items = payload;
+
+    if ($.isPlainObject(payload)) {
+      items = payload.items || payload.results || payload.data || [];
+    }
+
+    if (!$.isArray(items)) {
+      return [];
+    }
+
+    return $.map(items, function (item) {
+      return {
+        round: item.round || item.roundLabel || item.title || "",
+        caption: item.caption || item.elapsedText || item.description || "",
+        beforeImageUrl: readImageField(item, "beforeImageUrl"),
+        beforePosition: readPositionField(item, "beforePosition", "center"),
+        afterImageUrl: readImageField(item, "afterImageUrl"),
+        afterPosition: readPositionField(item, "afterPosition", "center")
+      };
+    });
+  }
+
+  function renderSec7Results(results) {
+    var html = "";
+
+    $.each(results, function (_, item) {
+      var round = escapeHtml(item.round);
+      var caption = escapeHtml(item.caption);
+      var beforeImageUrl = escapeHtml(item.beforeImageUrl);
+      var beforePosition = escapeHtml(item.beforePosition || "center");
+      var afterImageUrl = escapeHtml(item.afterImageUrl);
+      var afterPosition = escapeHtml(item.afterPosition || "center");
+
+      html += '<article class="sec7-result-card">';
+      html += '<strong class="sec7-result-round">' + round + "</strong>";
+      html += '<div class="sec7-result-images">';
+      html += '<div class="sec7-result-photo sec7-result-photo--before" style="background-image:url(\'' + beforeImageUrl + '\'); background-position:' + beforePosition + ';">';
+      html += '<span class="sec7-result-badge">BEFORE</span>';
+      html += "</div>";
+      html += '<div class="sec7-result-photo sec7-result-photo--after" style="background-image:url(\'' + afterImageUrl + '\'); background-position:' + afterPosition + ';">';
+      html += '<span class="sec7-result-badge">AFTER</span>';
+      html += "</div>";
+      html += "</div>";
+      html += '<p class="sec7-result-caption">' + caption + "</p>";
+      html += "</article>";
+    });
+
+    if (!html) {
+      html = '<article class="sec7-result-card sec7-result-card--empty"><p class="sec7-result-empty">등록된 시술 결과가 없습니다.</p></article>';
+    }
+
+    $sec7Track.html(html);
+    $sec7Cards = $sec7Track.find(".sec7-result-card").not(".sec7-result-card--empty");
+    sec7CarouselIndex = 0;
+    renderSec7Carousel();
+  }
+
+  function loadSec7Results() {
+    var apiUrl = $.trim(String($sec7Carousel.data("apiUrl") || ""));
+
+    if (!apiUrl) {
+      renderSec7Results(sec7FallbackResults);
+      return;
+    }
+
+    $.getJSON(apiUrl)
+      .done(function (payload) {
+        var results = normalizeSec7Results(payload);
+
+        if (!results.length) {
+          renderSec7Results(sec7FallbackResults);
+          return;
+        }
+
+        renderSec7Results(results);
+      })
+      .fail(function () {
+        renderSec7Results(sec7FallbackResults);
+      });
+  }
 
   function renderQuickMenu(menuKey) {
     var menuItems = quickMenuData[menuKey] || [];
@@ -120,7 +282,14 @@ $(function () {
     var maxIndex;
     var cardWidth;
 
-    if (!$sec7Track.length || !$sec7Cards.length) {
+    if (!$sec7Track.length) {
+      return;
+    }
+
+    if (!$sec7Cards.length) {
+      $sec7Track.css("transform", "translateX(0)");
+      $sec7Prev.prop("disabled", true);
+      $sec7Next.prop("disabled", true);
       return;
     }
 
@@ -189,5 +358,5 @@ $(function () {
   $(window).on("resize", renderSec7Carousel);
 
   renderSec2Tab("pico");
-  renderSec7Carousel();
+  loadSec7Results();
 });
