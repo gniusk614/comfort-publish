@@ -70,8 +70,14 @@
             <p class="sec2-title-kicker" id="sec2Kicker">COMFORT PS: Tattoo Removal</p>
             <h3 class="sec2-title-main">
               <span class="sec2-title-main-marquee" id="sec2MainTitleMarquee">
-                <span class="sec2-title-main-track" id="sec2MainTitle">통증은 줄이고 효과는 높인 문신제거</span>
-                <span class="sec2-title-main-track" id="sec2MainTitleClone" aria-hidden="true">통증은 줄이고 효과는 높인 문신제거</span>
+                <span class="sec2-title-main-track" id="sec2MainTitle">
+                  <span class="sec2-title-main-piece">통증은 줄이고</span>
+                  <span class="sec2-title-main-piece">효과는 높이고</span>
+                </span>
+                <span class="sec2-title-main-track" id="sec2MainTitleClone" aria-hidden="true">
+                  <span class="sec2-title-main-piece">통증은 줄이고</span>
+                  <span class="sec2-title-main-piece">효과는 높이고</span>
+                </span>
               </span>
             </h3>
             <strong class="sec2-service-title" id="sec2ServiceTitle">피코 문신제거</strong>
@@ -244,13 +250,17 @@
             <div class="sec7-results-actions">
               <div class="sec7-results-nav">
                 <button type="button" class="sec7-results-arrow sec7-results-arrow--prev" id="sec7Prev" aria-label="이전 결과 보기">
-                  <span aria-hidden="true">&#x2039;</span>
+                  <svg class="sec7-results-arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15 6L9 12L15 18" />
+                  </svg>
                 </button>
                 <button type="button" class="sec7-results-arrow sec7-results-arrow--next" id="sec7Next" aria-label="다음 결과 보기">
-                  <span aria-hidden="true">&#x203A;</span>
+                  <svg class="sec7-results-arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M9 6L15 12L9 18" />
+                  </svg>
                 </button>
               </div>
-              <a href="#" class="sec7-results-more">더 보기
+              <a href="#" class="sec7-results-more"><span class="sec7-results-more-label">더 보기</span>
                 <svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12H19" />
                   <path d="M13 6L19 12L13 18" />
@@ -329,18 +339,40 @@
             </div>
 
             <div class="sec7-route-channels">
-              <a href="#" class="sec7-route-channel sec7-route-channel--kakao">카카오톡</a>
-              <a href="#" class="sec7-route-channel sec7-route-channel--line">라인상담</a>
+              <a href="#" class="sec7-route-channel sec7-route-channel--kakao">
+                <span class="sec7-route-channel-badge sec7-route-channel-badge--kakao" aria-hidden="true">
+                  <img src="./assets/images/main/kakao.png" alt="" class="sec7-route-channel-icon" />
+                  <span class="sec7-route-channel-icon-label">TALK</span>
+                </span>
+                <span class="sec7-route-channel-text">카카오톡</span>
+              </a>
+              <a href="#" class="sec7-route-channel sec7-route-channel--line">
+                <span class="sec7-route-channel-badge sec7-route-channel-badge--line" aria-hidden="true">
+                  <img src="./assets/images/main/line.png" alt="" class="sec7-route-channel-icon" />
+                  <span class="sec7-route-channel-icon-label">LINE</span>
+                </span>
+                <span class="sec7-route-channel-text">라인상담</span>
+              </a>
             </div>
 
             <dl class="sec7-route-hours">
               <div class="sec7-route-hours-row">
                 <dt>진료 시간</dt>
-                <dd>월 - 금&nbsp;&nbsp;오전 10시&nbsp;&nbsp;~&nbsp;&nbsp;오후 7시</dd>
+                <dd>
+                  <span class="sec7-route-hours-content">
+                    <span class="sec7-route-hours-day">월 - 금</span>
+                    <span class="sec7-route-hours-time">오전 10시 ~ 오후 7시</span>
+                  </span>
+                </dd>
               </div>
               <div class="sec7-route-hours-row">
                 <dt></dt>
-                <dd>토 요 일&nbsp;&nbsp;오전 10시&nbsp;&nbsp;~&nbsp;&nbsp;오후 5시</dd>
+                <dd>
+                  <span class="sec7-route-hours-content">
+                    <span class="sec7-route-hours-day">토 요 일</span>
+                    <span class="sec7-route-hours-time">오전 10시 ~ 오후 5시</span>
+                  </span>
+                </dd>
               </div>
             </dl>
 
@@ -361,21 +393,21 @@
       <div class="sec7-bottom">
         <div class="sec7-bottom-inner">
           <a href="#" class="sec7-bottom-logo" aria-label="컴포트 성형외과 홈">
-            <img src="./assets/images/common/logo-comfort.png" alt="컴포트 성형외과" />
+            <img src="./assets/images/main/comfort_logo_02.png" alt="컴포트 성형외과" />
           </a>
 
           <div class="sec7-bottom-info">
+            <p class="sec7-bottom-heading">컴포트성형외과의원</p>
             <p class="sec7-bottom-meta">
-              <span>컴포트성형외과의원</span>
-              <span>대표 박영수</span>
-              <span>주소 서울특별시 강남구 테헤란로 105 (역삼동, 822-1) A타워 2층</span>
-              <span>사업자등록번호 763-02-02501</span>
+              <span class="sec7-bottom-item"><span class="sec7-bottom-label">대표</span><span class="sec7-bottom-value">박영수</span></span>
+              <span class="sec7-bottom-item"><span class="sec7-bottom-label">주소</span><span class="sec7-bottom-value">서울특별시 강남구 테헤란로 105 (역삼동, 822-1) A타워 2층</span></span>
+              <span class="sec7-bottom-item"><span class="sec7-bottom-label">사업자등록번호</span><span class="sec7-bottom-value">763-02-02501</span></span>
             </p>
             <p class="sec7-bottom-meta">
-              <span>전화 02-557-0775</span>
-              <span>팩스 02-557-0776</span>
-              <span>이메일 comfortps@naver.com</span>
-              <span>계좌 기업 048-151175-04-028 [비급여수가표]</span>
+              <span class="sec7-bottom-item"><span class="sec7-bottom-label">전화</span><span class="sec7-bottom-value">02-557-0775</span></span>
+              <span class="sec7-bottom-item"><span class="sec7-bottom-label">팩스</span><span class="sec7-bottom-value">02-557-0776</span></span>
+              <span class="sec7-bottom-item"><span class="sec7-bottom-label">이메일</span><span class="sec7-bottom-value">comfortps@naver.com</span></span>
+              <span class="sec7-bottom-item"><span class="sec7-bottom-label">계좌</span><span class="sec7-bottom-value">기업 048-151175-04-028 [비급여수가표]</span></span>
             </p>
             <p class="sec7-bottom-copy">&copy; 2022 Comfort Plastic Surgery. All rights reserved.</p>
           </div>

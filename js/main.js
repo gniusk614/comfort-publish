@@ -18,25 +18,25 @@ $(function () {
   var sec2TabData = {
     pico: {
       image: "./assets/images/main/sec2-dul-2371.png",
-      mainTitle: "통증은 줄이고 효과는 높인 문신제거",
+      mainTitleParts: ["통증은 줄이고", "효과는 높이고"],
       serviceTitle: "피코 문신제거",
       serviceDesc: "피코레이저로 문신에 맞춰 효과적이고 세밀한 시술이 가능합니다."
     },
     semi: {
       image: "./assets/images/main/sec2-dul-2371.png",
-      mainTitle: "잔흔은 줄이고 자연스러움은 높인 문신제거",
+      mainTitleParts: ["잔흔은 줄이고", "자연스러움은 높이고"],
       serviceTitle: "반영구 문신제거",
       serviceDesc: "예민한 부위인 만큼 섬세한 조사로 부작용을 줄이며 효과를 높입니다."
     },
     scalp: {
       image: "./assets/images/main/sec2-dul-2371.png",
-      mainTitle: "두피 상태에 맞춰 안전하게 진행하는 문신제거",
+      mainTitleParts: ["두피 상태에 맞춰", "안전하게 진행하는 문신제거"],
       serviceTitle: "두피 문신제거",
       serviceDesc: "잘못되었거나 번진 두피 문신도 두피와 머리카락의 손상을 최소화하여 시술합니다."
     },
     surgical: {
       image: "./assets/images/main/sec2-dul-2371.png",
-      mainTitle: "부위 특성에 맞춘 수술적 문신제거",
+      mainTitleParts: ["부위 특성에 맞춘", "수술적 문신제거"],
       serviceTitle: "수술적 문신제거",
       serviceDesc: "면접이나 결혼 등으로 빠른 시일 내 제거를 해야 하는 분들께 추천드립니다."
     }
@@ -76,6 +76,17 @@ $(function () {
     $hoverQuickMenu.html(html);
   }
 
+  function renderSec2MainTitle(mainTitleParts) {
+    var parts = mainTitleParts || [];
+    var html = "";
+
+    $.each(parts, function (_, label) {
+      html += '<span class="sec2-title-main-piece">' + label + "</span>";
+    });
+
+    return html;
+  }
+
   function renderSec2Tab(tabKey) {
     var tabData = sec2TabData[tabKey];
 
@@ -83,8 +94,8 @@ $(function () {
       return;
     }
 
-    $sec2MainTitle.text(tabData.mainTitle);
-    $sec2MainTitleClone.text(tabData.mainTitle);
+    $sec2MainTitle.html(renderSec2MainTitle(tabData.mainTitleParts));
+    $sec2MainTitleClone.html(renderSec2MainTitle(tabData.mainTitleParts));
     $sec2ServiceTitle.text(tabData.serviceTitle);
     $sec2ServiceDesc.text(tabData.serviceDesc);
     $sec2Image.css("background-image", 'url("' + tabData.image + '")');
