@@ -10,6 +10,7 @@ $(function () {
   var $sec2MainTitleClone = $("#sec2MainTitleClone");
   var $sec2ServiceTitle = $("#sec2ServiceTitle");
   var $sec2ServiceDesc = $("#sec2ServiceDesc");
+  var $sec3Cards = $("#sec3 .sec3-card");
   var $sec7Carousel = $("#sec7Carousel");
   var $sec7Track = $("#sec7Track");
   var $sec7Cards = $();
@@ -269,8 +270,17 @@ $(function () {
     $sec2Tabs.find('button[data-tab="' + tabKey + '"]').closest("li").addClass("is-active");
   }
 
+  function setActiveSec3Card($card) {
+    if (!$card.length) {
+      return;
+    }
+
+    $sec3Cards.removeClass("is-active");
+    $card.addClass("is-active");
+  }
+
   function getSec7PerView() {
-    if (window.matchMedia("(max-width: 768px)").matches) {
+    if (window.matchMedia("(max-width: 800px)").matches) {
       return 1;
     }
 
@@ -281,6 +291,13 @@ $(function () {
     var perView;
     var maxIndex;
     var cardWidth;
+    var translateX;
+    var carouselWidth;
+    var maxScrollLeft;
+    var targetScrollLeft;
+    var $targetCard;
+    var targetLeft;
+    var isMobile;
 
     if (!$sec7Track.length) {
       return;
@@ -296,9 +313,30 @@ $(function () {
     perView = getSec7PerView();
     maxIndex = Math.max($sec7Cards.length - perView, 0);
     sec7CarouselIndex = Math.min(sec7CarouselIndex, maxIndex);
+    isMobile = window.matchMedia("(max-width: 800px)").matches;
     cardWidth = $sec7Cards.first().outerWidth(true);
+    translateX = -(sec7CarouselIndex * cardWidth);
 
-    $sec7Track.css("transform", "translateX(" + -(sec7CarouselIndex * cardWidth) + "px)");
+    if (isMobile) {
+      $targetCard = $sec7Cards.eq(sec7CarouselIndex);
+      carouselWidth = $sec7Carousel.innerWidth();
+      maxScrollLeft = $sec7Carousel[0].scrollWidth - $sec7Carousel.innerWidth();
+
+      $sec7Track.css("transform", "translateX(0)");
+
+      if ($targetCard.length && carouselWidth) {
+        targetLeft = $targetCard[0].offsetLeft;
+        targetScrollLeft = targetLeft - ((carouselWidth - $targetCard.outerWidth()) / 2);
+        targetScrollLeft = Math.max(0, Math.min(targetScrollLeft, Math.max(maxScrollLeft, 0)));
+        $sec7Carousel[0].scrollTo({
+          left: targetScrollLeft,
+          behavior: "smooth"
+        });
+      }
+    } else {
+      $sec7Carousel.scrollLeft(0);
+      $sec7Track.css("transform", "translateX(" + translateX + "px)");
+    }
     $sec7Prev.prop("disabled", maxIndex === 0);
     $sec7Next.prop("disabled", maxIndex === 0);
   }
@@ -321,6 +359,10 @@ $(function () {
   $sec2Tabs.on("click", "button", function () {
     var tabKey = $(this).data("tab");
     renderSec2Tab(tabKey);
+  });
+
+  $sec3Cards.on("click focusin", function () {
+    setActiveSec3Card($(this));
   });
 
   $sec7Prev.on("click", function () {
