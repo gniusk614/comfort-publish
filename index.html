@@ -18,7 +18,7 @@
           </h1>
           <button type="button" class="btn-menu" aria-label="메뉴 열기">Menu</button>
           <nav class="gnb" aria-label="주 메뉴">
-            <ul class="group-11">
+            <ul class="gnb-list">
               <li class="gnb-item gnb-intro is-active" data-menu="intro"><a href="#">컴포트 소개</a></li>
               <li class="gnb-item gnb-tattoo" data-menu="tattoo"><a href="#">문신제거</a></li>
               <li class="gnb-item gnb-anesthesia" data-menu="anesthesia"><a href="#">컴포트 마취</a></li>
@@ -27,10 +27,10 @@
           </nav>
         </div>
       </header>
-      <div class="rectangle-1-copy">
+      <div class="header-dropdown-panel">
         <div class="inner">
-          <div class="comfort-intro-group">
-            <div class="hover-quick-menu" id="hoverQuickMenu"></div>
+          <div class="header-dropdown-links">
+            <div class="header-quick-menu" id="headerQuickMenu"></div>
           </div>
         </div>
       </div>
@@ -38,23 +38,26 @@
 
     <main class="container">
       <section id="mv">
-        <div class="rectangle-2"></div>
-        <div class="bu6i4108-1"></div>
+        <div class="mv-background"></div>
+        <div class="mv-background-image"></div>
         <div class="mv-content">
           <h2 class="comfort-plastic-surgery">COMFORT PLASTIC SURGERY</h2>
-          <p class="mv-desc">컴포트는 환자분의 만족과 안전을 생각합니다.</p>
+          <p class="mv-desc">
+            <span>컴포트는 환자분의</span>
+            <span>만족과 안전을 생각합니다.</span>
+          </p>
         </div>
       </section>
 
       <section id="sec2">
         <div class="sec2-layer">
-          <div class="left">
-            <div class="dul-2371"></div>
+          <div class="sec2-image-wrap">
+            <div class="sec2-treatment-image"></div>
           </div>
 
-          <div class="logo-symbol">
-            <img src="./assets/images/main/mv-symbol-comfort.png" alt="컴포트 심볼 로고" class="shape-9" />
-            <svg class="comfort-palstic-surgery-comfort-palstic-surgery" viewBox="0 0 144 150" aria-hidden="true">
+          <div class="sec2-logo-badge">
+            <img src="./assets/images/main/comfort-symbol-mark.png" alt="컴포트 심볼 로고" class="sec2-logo-mark" />
+            <svg class="sec2-logo-ring" viewBox="0 0 144 150" aria-hidden="true">
               <defs>
                 <path id="logo-circle-text-path" d="M 72,75 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" />
               </defs>
@@ -116,7 +119,7 @@
               </div>
             </article>
 
-            <article class="sec3-card sec3-card--pain" tabindex="0">
+            <article class="sec3-card sec3-card--pain-care" tabindex="0">
               <div class="sec3-card-copy">
                 <p class="sec3-card-en">Pain Care System</p>
                 <strong class="sec3-card-title">통증 케어 시스템</strong>
@@ -124,7 +127,7 @@
               </div>
             </article>
 
-            <article class="sec3-card sec3-card--laser" tabindex="0">
+            <article class="sec3-card sec3-card--pico-laser" tabindex="0">
               <div class="sec3-card-copy">
                 <p class="sec3-card-en">The Latest Pico Laser</p>
                 <strong class="sec3-card-title">최신 피코레이저</strong>
@@ -132,7 +135,7 @@
               </div>
             </article>
 
-            <article class="sec3-card sec3-card--custom" tabindex="0">
+            <article class="sec3-card sec3-card--custom-care" tabindex="0">
               <div class="sec3-card-copy">
                 <p class="sec3-card-en">Customized System</p>
                 <strong class="sec3-card-title">맞춤 진료 시스템</strong>
@@ -145,9 +148,14 @@
 
       <section id="sec4">
         <div class="sec4-inner">
-          <div class="sec4-copy">
+          <div class="sec4-copy sec4-copy--top">
             <p class="sec4-kicker">COMFORT PS: Minimizing Pain</p>
             <h3 class="sec4-quote">“통증이 두려운 당신을 위한 문신제거”</h3>
+          </div>
+
+          <div class="sec4-visual" aria-hidden="true"></div>
+
+          <div class="sec4-copy sec4-copy--bottom">
             <p class="sec4-highlight">
               <span>성형외과</span>
               <svg class="sec4-highlight-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -165,8 +173,6 @@
               </svg>
             </a>
           </div>
-
-          <div class="sec4-visual" aria-hidden="true"></div>
         </div>
       </section>
 
@@ -185,19 +191,19 @@
           </div>
 
           <div class="sec5-stage" aria-hidden="true">
-            <div class="sec5-machine sec5-machine--1">
-              <img src="./assets/images/main/PICOPLUS-제품이미지-전측면2.png" alt="" />
+            <div class="sec5-machine sec5-machine--left">
+              <img src="./assets/images/main/pico-laser-machine-left.png" alt="" />
             </div>
-            <div class="sec5-machine sec5-machine--2">
-              <img src="./assets/images/main/Layer 5.png" alt="" />
+            <div class="sec5-machine sec5-machine--center">
+              <img src="./assets/images/main/pico-laser-machine-center.png" alt="" />
             </div>
-            <div class="sec5-machine sec5-machine--3">
-              <img src="./assets/images/main/Syneron_Picoway_Rcam_004_투명배경 copy.png" alt="" />
+            <div class="sec5-machine sec5-machine--right-front">
+              <img src="./assets/images/main/pico-laser-machine-right-front.png" alt="" />
             </div>
-            <div class="sec5-machine sec5-machine--4">
-              <img src="./assets/images/main/Syneron_Picoway_Rcam_004_투명배경 copy 2.png" alt="" />
+            <div class="sec5-machine sec5-machine--right-back">
+              <img src="./assets/images/main/pico-laser-machine-right-back.png" alt="" />
             </div>
-            <div class="sec5-machine-light"></div>
+            <div class="sec5-flare"></div>
           </div>
         </div>
       </section>
@@ -348,7 +354,7 @@
       <div class="sec7-bottom">
         <div class="sec7-bottom-inner">
           <a href="#" class="sec7-bottom-logo" aria-label="컴포트 성형외과 홈">
-            <img src="./assets/images/main/comfort_logo_02.png" alt="컴포트 성형외과" />
+            <img src="./assets/images/main/footer-comfort-logo.png" alt="컴포트 성형외과" />
           </a>
 
           <div class="sec7-bottom-info">

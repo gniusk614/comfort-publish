@@ -54,7 +54,7 @@ img {
 }
 
 .header .inner,
-.rectangle-1-copy .inner {
+.header-dropdown-panel .inner {
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -103,7 +103,7 @@ img {
   flex-shrink: 0;
 }
 
-.group-11 {
+.gnb-list {
   width: 100%;
   height: 17px;
   margin: 12px 0 13px;
@@ -129,7 +129,7 @@ img {
   color: #21283c;
 }
 
-.group-11 .gnb-item.is-active a::after {
+.gnb-list .gnb-item.is-active a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -140,23 +140,23 @@ img {
   display: none;
 }
 
-.header-area:hover .group-11 .gnb-item.is-active a::after {
+.header-area:hover .gnb-list .gnb-item.is-active a::after {
   display: block;
 }
 
-.group-11 .gnb-intro {
+.gnb-list .gnb-intro {
   margin-right: 0;
 }
 
-.group-11 .gnb-tattoo {
+.gnb-list .gnb-tattoo {
   margin-right: 0;
 }
 
-.group-11 .gnb-anesthesia {
+.gnb-list .gnb-anesthesia {
   margin-right: 0;
 }
 
-.rectangle-1-copy {
+.header-dropdown-panel {
   position: absolute;
   top: 0;
   left: 0;
@@ -170,21 +170,21 @@ img {
   display: none;
 }
 
-.header-area:hover .rectangle-1-copy {
+.header-area:hover .header-dropdown-panel {
   display: block;
 }
 
-.rectangle-1-copy .inner {
+.header-dropdown-panel .inner {
   padding: 0;
 }
 
-.comfort-intro-group {
+.header-dropdown-links {
   width: clamp(420px, 42.7083vw, 820px);
   height: auto;
   margin: clamp(28px, 2.2396vw, 43px) clamp(24px, 12.8646vw, 247px) 0 auto;
 }
 
-.hover-quick-menu {
+.header-quick-menu {
   width: 100%;
   height: auto;
   display: grid;
@@ -194,7 +194,7 @@ img {
   padding-top: 0;
 }
 
-.hover-quick-menu .rectangle-40 {
+.header-quick-menu .quick-menu-link {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
@@ -215,7 +215,7 @@ img {
   line-height: 1;
 }
 
-.hover-quick-menu .rectangle-40::after {
+.header-quick-menu .quick-menu-link::after {
   content: ">";
   display: inline-flex;
   align-items: center;
@@ -233,15 +233,15 @@ img {
   flex-shrink: 0;
 }
 
-.hover-quick-menu .rectangle-40:hover,
-.hover-quick-menu .rectangle-40:focus-visible {
+.header-quick-menu .quick-menu-link:hover,
+.header-quick-menu .quick-menu-link:focus-visible {
   border: 0;
   background: #176eae;
   color: #fff;
 }
 
-.hover-quick-menu .rectangle-40:hover::after,
-.hover-quick-menu .rectangle-40:focus-visible::after {
+.header-quick-menu .quick-menu-link:hover::after,
+.header-quick-menu .quick-menu-link:focus-visible::after {
   color: #fff;
 }
 
@@ -254,13 +254,13 @@ img {
   padding: 0;
 }
 
-.rectangle-2,
-.bu6i4108-1 {
+.mv-background,
+.mv-background-image {
   position: absolute;
   left: 0;
 }
 
-.rectangle-2 {
+.mv-background {
   width: 100vw;
   height: clamp(420px, 47.6563vw, 915px);
   top: 0;
@@ -270,7 +270,7 @@ img {
   z-index: 1;
 }
 
-.bu6i4108-1 {
+.mv-background-image {
   width: 100vw;
   height: 100%;
   top: 0;
@@ -281,7 +281,7 @@ img {
     clamp(280px, 43.0729vw, 827px)
     clamp(56px, 7.1875vw, 138px)
     clamp(120px, 16.1979vw, 311px);
-  background: url("../assets/images/main/mv-bu6i4108.png") no-repeat 0 0 / cover;
+  background: url("../assets/images/main/hero-clinic-interior.png") no-repeat 0 0 / cover;
   mix-blend-mode: luminosity;
   z-index: 2;
 }
@@ -321,6 +321,10 @@ img {
   white-space: nowrap;
 }
 
+.mv-desc span {
+  display: inline;
+}
+
 #sec2 .sec2-layer {
   --sec2-image-left: clamp(48px, 13.2292vw, 254px);
   --sec2-image-top: clamp(4px, 0.3646vw, 7px);
@@ -342,7 +346,7 @@ img {
   background: #fff;
 }
 
-#sec2 .left {
+#sec2 .sec2-image-wrap {
   position: absolute;
   left: var(--sec2-image-left);
   top: var(--sec2-image-top);
@@ -351,16 +355,16 @@ img {
   margin: 0;
 }
 
-#sec2 .dul-2371 {
+#sec2 .sec2-treatment-image {
   width: 100%;
   height: 100%;
   margin: 0;
   border-top-left-radius: clamp(150px, 18.2292vw, 350px);
   border-top-right-radius: clamp(150px, 18.2292vw, 350px);
-  background: url("../assets/images/main/sec2-dul-2371.png") no-repeat center / cover;
+  background: url("../assets/images/main/tattoo-removal-treatment.png") no-repeat center / cover;
 }
 
-#sec2 .logo-symbol {
+#sec2 .sec2-logo-badge {
   position: absolute;
   width: clamp(72px, 7.5vw, 144px);
   height: clamp(75px, 7.8125vw, 150px);
@@ -375,7 +379,7 @@ img {
   z-index: 4;
 }
 
-#sec2 .shape-9 {
+#sec2 .sec2-logo-mark {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -385,7 +389,7 @@ img {
   height: clamp(22px, 2.3073vw, 44.3px);
 }
 
-#sec2 .comfort-palstic-surgery-comfort-palstic-surgery {
+#sec2 .sec2-logo-ring {
   position: absolute;
   left: 0;
   top: 0;
@@ -395,7 +399,7 @@ img {
   animation: logo-ring-spin 10s linear infinite;
 }
 
-#sec2 .comfort-palstic-surgery-comfort-palstic-surgery .logo-ring-text {
+#sec2 .sec2-logo-ring .logo-ring-text {
   font-family: "Philosopher", serif;
   font-size: clamp(10px, 0.7813vw, 15px);
   font-weight: 700;
@@ -588,7 +592,7 @@ img {
   position: relative;
   margin-top: clamp(84px, 8.3333vw, 160px);
   padding: clamp(96px, 7.8125vw, 150px) 0 clamp(92px, 8.0729vw, 155px);
-  background: url("../assets/images/main/cb0460055710.png") no-repeat center / cover;
+  background: url("../assets/images/main/sec3-feature-background.png") no-repeat center / cover;
   overflow: hidden;
 }
 
@@ -772,7 +776,7 @@ img {
 }
 
 #sec3 .sec3-card--experience {
-  background-image: url("../assets/images/main/sec3_1.png");
+  background-image: url("../assets/images/main/sec3-experience-card.png");
   background-position: center;
 }
 
@@ -814,48 +818,48 @@ img {
   color: #2f2f2f;
 }
 
-#sec3 .sec3-card--pain {
-  background-image: url("../assets/images/main/sec3_2.png");
+#sec3 .sec3-card--pain-care {
+  background-image: url("../assets/images/main/sec3-pain-care-card.png");
   background-position: center;
 }
 
-#sec3 .sec3-card--pain::before {
+#sec3 .sec3-card--pain-care::before {
   background: linear-gradient(180deg, rgba(0, 18, 33, 0.14) 0%, rgba(0, 18, 33, 0.8) 100%);
 }
 
-#sec3 .sec3-card--pain.is-active::before,
-#sec3 .sec3-card-list:hover .sec3-card--pain:hover::before,
-#sec3 .sec3-card-list:focus-within .sec3-card--pain:focus-visible::before {
+#sec3 .sec3-card--pain-care.is-active::before,
+#sec3 .sec3-card-list:hover .sec3-card--pain-care:hover::before,
+#sec3 .sec3-card-list:focus-within .sec3-card--pain-care:focus-visible::before {
   background: linear-gradient(180deg, rgba(0, 18, 33, 0.02) 0%, rgba(0, 18, 33, 0.12) 100%);
 }
 
-#sec3 .sec3-card--laser {
-  background-image: url("../assets/images/main/sec3_3.png");
+#sec3 .sec3-card--pico-laser {
+  background-image: url("../assets/images/main/sec3-pico-laser-card.png");
   background-position: center;
 }
 
-#sec3 .sec3-card--laser::before {
+#sec3 .sec3-card--pico-laser::before {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.7) 100%);
 }
 
-#sec3 .sec3-card--laser.is-active::before,
-#sec3 .sec3-card-list:hover .sec3-card--laser:hover::before,
-#sec3 .sec3-card-list:focus-within .sec3-card--laser:focus-visible::before {
+#sec3 .sec3-card--pico-laser.is-active::before,
+#sec3 .sec3-card-list:hover .sec3-card--pico-laser:hover::before,
+#sec3 .sec3-card-list:focus-within .sec3-card--pico-laser:focus-visible::before {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.12) 100%);
 }
 
-#sec3 .sec3-card--custom {
-  background-image: url("../assets/images/main/sec3_4.png");
+#sec3 .sec3-card--custom-care {
+  background-image: url("../assets/images/main/sec3-custom-care-card.png");
   background-position: center;
 }
 
-#sec3 .sec3-card--custom::before {
+#sec3 .sec3-card--custom-care::before {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.68) 100%);
 }
 
-#sec3 .sec3-card--custom.is-active::before,
-#sec3 .sec3-card-list:hover .sec3-card--custom:hover::before,
-#sec3 .sec3-card-list:focus-within .sec3-card--custom:focus-visible::before {
+#sec3 .sec3-card--custom-care.is-active::before,
+#sec3 .sec3-card-list:hover .sec3-card--custom-care:hover::before,
+#sec3 .sec3-card-list:focus-within .sec3-card--custom-care:focus-visible::before {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.12) 100%);
 }
 
@@ -867,16 +871,31 @@ img {
 #sec4 .sec4-inner {
   width: min(calc(100% - 40px), clamp(320px, 71.3542vw, 1370px));
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns:
+    minmax(300px, clamp(300px, 29.5833vw, 568px))
+    minmax(320px, clamp(320px, 33.8542vw, 650px));
+  grid-template-areas:
+    "top visual"
+    "bottom visual";
   align-items: center;
   justify-content: space-between;
-  gap: clamp(40px, 6.4063vw, 123px);
+  column-gap: clamp(40px, 6.4063vw, 123px);
+  row-gap: clamp(50px, 4.1146vw, 79px);
 }
 
 #sec4 .sec4-copy {
-  flex: 0 1 clamp(300px, 29.5833vw, 568px);
+  width: 100%;
   max-width: 568px;
+}
+
+#sec4 .sec4-copy--top {
+  grid-area: top;
   padding-top: clamp(0px, 3.0208vw, 58px);
+}
+
+#sec4 .sec4-copy--bottom {
+  grid-area: bottom;
 }
 
 #sec4 .sec4-quote {
@@ -908,18 +927,23 @@ img {
   white-space: nowrap;
 }
 
+#sec4 .sec4-copy--bottom .sec4-highlight {
+  margin-top: 0;
+}
+
 #sec4 .sec4-highlight span {
   white-space: nowrap;
 }
 
 #sec4 .sec4-highlight-icon {
-  width: clamp(20px, 1.4583vw, 28px);
-  height: clamp(20px, 1.4583vw, 28px);
+  width: clamp(24px, 1.7708vw, 34px);
+  height: clamp(24px, 1.7708vw, 34px);
   flex-shrink: 0;
   fill: none;
   stroke: currentColor;
-  stroke-width: 2.2;
+  stroke-width: 1.2;
   stroke-linecap: round;
+  transform: translateY(-1px);
 }
 
 #sec4 .sec4-doctor {
@@ -974,11 +998,12 @@ img {
 }
 
 #sec4 .sec4-visual {
-  flex: 0 1 clamp(320px, 33.8542vw, 650px);
+  grid-area: visual;
+  justify-self: end;
   width: clamp(320px, 33.8542vw, 650px);
   height: clamp(280px, 28.6458vw, 550px);
   border-radius: clamp(24px, 1.5625vw, 30px);
-  background: url("../assets/images/main/DUL_2362 (2).png") no-repeat center / cover;
+  background: url("../assets/images/main/doctor-park-youngsoo.png") no-repeat center / cover;
   box-shadow: 0 30px 70px rgba(16, 32, 45, 0.08);
 }
 
@@ -996,7 +1021,7 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../assets/images/main/td06090000726.png") no-repeat center 42% / cover;
+  background: url("../assets/images/main/sec5-geometric-pattern.png") no-repeat center 42% / cover;
   opacity: 0.5;
   mix-blend-mode: soft-light;
   filter: brightness(1.08) contrast(1.08);
@@ -1095,7 +1120,7 @@ img {
   object-fit: contain;
 }
 
-#sec5 .sec5-machine--1 {
+#sec5 .sec5-machine--left {
   left: calc(100% * 30 / 980);
   top: 0;
   width: calc(100% * 359 / 980);
@@ -1103,7 +1128,7 @@ img {
   z-index: 3;
 }
 
-#sec5 .sec5-machine--2 {
+#sec5 .sec5-machine--center {
   left: calc(100% * 273 / 980);
   top: calc(100% * 52 / 816);
   width: calc(100% * 312 / 980);
@@ -1111,7 +1136,7 @@ img {
   z-index: 4;
 }
 
-#sec5 .sec5-machine--3 {
+#sec5 .sec5-machine--right-front {
   left: calc(100% * 464 / 980);
   top: calc(100% * 69 / 816);
   width: calc(100% * 325 / 980);
@@ -1119,7 +1144,7 @@ img {
   z-index: 2;
 }
 
-#sec5 .sec5-machine--4 {
+#sec5 .sec5-machine--right-back {
   left: calc(100% * 618 / 980);
   top: calc(100% * 66 / 816);
   width: calc(100% * 336 / 980);
@@ -1127,13 +1152,13 @@ img {
   z-index: 1;
 }
 
-#sec5 .sec5-machine-light {
+#sec5 .sec5-flare {
   position: absolute;
   left: calc(100% * 744 / 980);
   top: calc(100% * 186 / 816);
   width: calc(100% * 424 / 980);
   height: calc(100% * 211 / 816);
-  background: url("../assets/images/main/light.png") no-repeat center / contain;
+  background: url("../assets/images/main/pico-laser-flare.png") no-repeat center / contain;
   mix-blend-mode: screen;
   opacity: 0.95;
   filter: saturate(1.2) brightness(1.08);
@@ -1141,7 +1166,7 @@ img {
   z-index: 5;
 }
 
-#sec5 .sec5-machine--4::before {
+#sec5 .sec5-machine--right-back::before {
   content: none;
 }
 
@@ -1407,17 +1432,17 @@ img {
 }
 
 #sec6 .sec6-card--kit .sec6-card-visual::before {
-  background-image: url("../assets/images/main/DUL_2346 copy.png");
+  background-image: url("../assets/images/main/before-after-sample-1.png");
   background-position: center;
 }
 
 #sec6 .sec6-card--consult .sec6-card-visual::before {
-  background-image: url("../assets/images/main/sec2-dul-2371.png");
+  background-image: url("../assets/images/main/tattoo-removal-treatment.png");
   background-position: 54% center;
 }
 
 #sec6 .sec6-card--aftercare .sec6-card-visual::before {
-  background-image: url("../assets/images/main/DUL_2346 copy.png");
+  background-image: url("../assets/images/main/before-after-sample-1.png");
   background-position: 84% center;
 }
 
@@ -1677,42 +1702,42 @@ img {
 }
 
 #sec7 .sec7-result-photo--finger-before {
-  background-image: url("../assets/images/main/DUL_2346 copy.png");
+  background-image: url("../assets/images/main/before-after-sample-1.png");
   background-position: 34% center;
 }
 
 #sec7 .sec7-result-photo--finger-after {
-  background-image: url("../assets/images/main/sec2-dul-2371.png");
+  background-image: url("../assets/images/main/tattoo-removal-treatment.png");
   background-position: 58% center;
 }
 
 #sec7 .sec7-result-photo--arm-before {
-  background-image: url("../assets/images/main/sec2-dul-2371.png");
+  background-image: url("../assets/images/main/tattoo-removal-treatment.png");
   background-position: 28% center;
 }
 
 #sec7 .sec7-result-photo--arm-after {
-  background-image: url("../assets/images/main/DUL_2346 copy.png");
+  background-image: url("../assets/images/main/before-after-sample-1.png");
   background-position: 66% center;
 }
 
 #sec7 .sec7-result-photo--brow-before {
-  background-image: url("../assets/images/main/DUL_2346 copy.png");
+  background-image: url("../assets/images/main/before-after-sample-1.png");
   background-position: 48% 20%;
 }
 
 #sec7 .sec7-result-photo--brow-after {
-  background-image: url("../assets/images/main/sec2-dul-2371.png");
+  background-image: url("../assets/images/main/tattoo-removal-treatment.png");
   background-position: 42% 30%;
 }
 
 #sec7 .sec7-result-photo--semi-before {
-  background-image: url("../assets/images/main/sec2-dul-2371.png");
+  background-image: url("../assets/images/main/tattoo-removal-treatment.png");
   background-position: 74% center;
 }
 
 #sec7 .sec7-result-photo--semi-after {
-  background-image: url("../assets/images/main/DUL_2346 copy.png");
+  background-image: url("../assets/images/main/before-after-sample-1.png");
   background-position: 44% center;
 }
 
@@ -2027,6 +2052,16 @@ img {
   }
 }
 
+@keyframes sec2-title-marquee-mobile {
+  0%,
+  12% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @keyframes logo-ring-spin {
   0% {
     transform: rotate(0deg);
@@ -2088,11 +2123,11 @@ img {
     display: block;
   }
 
-  .rectangle-1-copy {
+  .header-dropdown-panel {
     display: none !important;
   }
 
-  .group-11 {
+  .gnb-list {
     width: auto;
     height: auto;
     margin: 0;
@@ -2106,7 +2141,7 @@ img {
     font-size: 16px;
   }
 
-  .group-11 .gnb-item.is-active a::after {
+  .gnb-list .gnb-item.is-active a::after {
     display: none;
   }
 
@@ -2134,19 +2169,56 @@ img {
 
   #sec4 .sec4-inner {
     width: min(calc(100% - 40px), 900px);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 48px;
+    grid-template-columns: minmax(0, 560px);
+    grid-template-areas:
+      "top"
+      "visual"
+      "bottom";
+    justify-content: center;
+    justify-items: center;
+    row-gap: 48px;
   }
 
   #sec4 .sec4-copy {
+    width: 100%;
+    max-width: none;
+    padding-top: 0;
+  }
+
+  #sec4 .sec4-copy--top,
+  #sec4 .sec4-copy--bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #sec4 .sec4-quote,
+  #sec4 .sec4-highlight,
+  #sec4 .sec4-doctor,
+  #sec4 .sec4-desc {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  #sec4 .sec4-highlight {
+    justify-content: center;
+  }
+
+  #sec4 .sec4-detail-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #sec4 .sec4-copy--top {
     padding-top: 0;
   }
 
   #sec4 .sec4-visual {
     width: 100%;
     max-width: 560px;
-    align-self: center;
+    justify-self: center;
   }
 
   #sec5 {
@@ -2265,112 +2337,271 @@ img {
   }
 }
 
-@media (max-width: 768px) {
-  #mv {
-    height: clamp(360px, 76vw, 520px);
+@media (max-width: 800px) {
+  .header {
+    height: calc(100vw * 110 / 800);
   }
 
-  .rectangle-2 {
+  .header .inner {
+    padding: calc(100vw * 34 / 800) calc(100vw * 30 / 800);
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: calc(100vw * 192 / 800);
+  }
+
+  .logo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn-menu {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vw * 50 / 800);
+    height: calc(100vw * 42 / 800);
+    margin-left: 0;
+    border-radius: 0;
+    background: transparent;
+    color: transparent;
+    font-size: 0;
+    overflow: hidden;
+  }
+
+  .btn-menu::before {
+    content: "";
+    width: calc(100vw * 44 / 800);
+    height: 2px;
+    border-radius: 999px;
+    background: #176eae;
+    box-shadow:
+      0 calc(100vw * -12 / 800) 0 #176eae,
+      0 calc(100vw * 12 / 800) 0 #176eae;
+  }
+
+  .gnb {
+    top: calc(100vw * 110 / 800);
+    padding:
+      calc(100vw * 24 / 800)
+      calc(100vw * 30 / 800)
+      calc(100vw * 28 / 800);
+    max-height: calc(100vh - calc(100vw * 110 / 800));
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  #mv {
+    height: calc(100vw * 1407 / 800);
+  }
+
+  .mv-background {
     height: 100%;
   }
 
-  .bu6i4108-1 {
-    height: calc(100% - clamp(18px, 2.9167vw, 56px));
+  .mv-background-image {
+    width: 100%;
+    height: 100%;
     background-position: center top;
   }
 
   .mv-content {
-    left: 20px;
-    right: 20px;
+    left: calc(100vw * 40 / 800);
+    right: auto;
     top: auto;
-    bottom: 64px;
-    max-width: min(90vw, 440px);
+    bottom: calc(100vw * 57 / 800);
+    max-width: calc(100vw * 640 / 800);
   }
 
   .comfort-plastic-surgery {
-    width: auto;
+    width: calc(100vw * 390 / 800);
     height: auto;
-    margin: 0;
-    font-size: 32px;
-    line-height: 1.2;
-    white-space: normal;
+    margin: 0 0 calc(100vw * 32 / 800);
+    font-size: calc(100vw * 30 / 800);
+    line-height: 1;
+    letter-spacing: -0.3px;
+    white-space: nowrap;
   }
 
   .mv-desc {
-    width: auto;
+    width: calc(100vw * 620 / 800);
+    max-width: 528px;
     height: auto;
-    margin: 14px 0 0;
-    font-size: 20px;
-    line-height: 1.4;
+    margin: 0;
+    font-size: calc(100vw * 48 / 800);
+    line-height: 1.22;
+    letter-spacing: -1.2px;
     white-space: normal;
+    word-break: keep-all;
+  }
+
+  .mv-desc span {
+    display: block;
+    white-space: nowrap;
   }
 
   #sec2 {
-    margin-top: 72px;
+    margin-top: 0;
+    padding: calc(100vw * 80 / 800) 0 calc(100vw * 72 / 800);
   }
 
   #sec2 .sec2-layer {
-    width: min(calc(100% - 40px), 420px);
+    position: relative;
+    width: 100%;
+    max-width: 800px;
     height: auto;
-    margin: 0 auto 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
+    margin: 0 auto;
+    padding: 0 calc(100vw * 40 / 800);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
   }
 
-  #sec2 .left {
+  #sec2 .sec2-image-wrap {
+    grid-row: 3;
     position: relative;
     left: auto;
     top: auto;
     width: 100%;
-    max-width: 420px;
-    height: clamp(340px, 110vw, 520px);
-    margin: 0 auto;
+    max-width: none;
+    height: auto;
+    margin: 0 0 calc(100vw * 46 / 800);
+    aspect-ratio: 720 / 926;
   }
 
-  #sec2 .logo-symbol {
-    left: 0;
-    top: 0;
+  #sec2 .sec2-treatment-image {
+    border-top-left-radius: calc(100vw * 340 / 800);
+    border-top-right-radius: calc(100vw * 340 / 800);
+  }
+
+  #sec2 .sec2-logo-badge {
+    grid-row: 3;
+    position: absolute;
+    left: calc(100vw * 41 / 800);
+    top: calc(100vw * 0 / 800);
+    justify-self: auto;
+    align-self: auto;
+    width: calc(100vw * 174 / 800);
+    height: calc(100vw * 180 / 800);
+    margin: 0;
+    padding:
+      calc(100vw * 63.7 / 800)
+      calc(100vw * 60.8 / 800)
+      calc(100vw * 63.1 / 800)
+      calc(100vw * 59.4 / 800);
+  }
+
+  #sec2 .sec2-logo-mark {
+    width: calc(100vw * 53.8 / 800);
+    height: calc(100vw * 53.2 / 800);
+  }
+
+  #sec2 .sec2-logo-ring .logo-ring-text {
+    font-size: calc(100vw * 16 / 800);
+    letter-spacing: -0.69px;
   }
 
   #sec2 .sec2-title-block {
-    position: relative;
-    left: auto;
-    top: auto;
-    width: 100%;
+    position: static;
+    width: auto;
+    max-width: none;
+    height: auto;
+    display: contents;
   }
 
-  #sec2 .sec2-title-kicker,
-  #sec2 .sec2-service-title {
-    white-space: normal;
+  #sec2 .sec2-title-kicker {
+    grid-row: 1;
+    width: calc(100vw * 457 / 800);
+    max-width: 457px;
+    margin: 0 0 calc(100vw * 19 / 800) calc(100vw * 10 / 800);
+    font-size: calc(100vw * 36 / 800);
+    letter-spacing: -0.36px;
+    white-space: nowrap;
   }
 
   #sec2 .sec2-title-main {
+    grid-row: 2;
+    width: calc(100vw * 680 / 800);
+    max-width: 680px;
+    margin: calc(100vw * 43 / 800) 0 calc(100vw * 44 / 800) calc(100vw * 12 / 800);
+    padding: calc(100vw * 20 / 800) 0;
+    font-size: calc(100vw * 60 / 800);
+    letter-spacing: -3px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  #sec2 .sec2-title-main-marquee {
+    --sec2-marquee-start-offset: 0px;
+    display: flex;
+    width: max-content;
+    min-width: 100%;
+    will-change: transform;
+    animation: sec2-title-marquee-mobile 9.5s linear infinite;
+  }
+
+  #sec2 .sec2-title-main-track {
+    display: inline-flex;
+    gap: calc(100vw * 18 / 800);
+    padding-right: calc(100vw * 40 / 800);
+  }
+
+  #sec2 .sec2-title-main-track[aria-hidden="true"] {
+    display: inline-flex;
+  }
+
+  #sec2 .sec2-service-title {
+    grid-row: 4;
     width: 100%;
-    white-space: normal;
+    margin: 0 0 calc(100vw * 18 / 800);
+    font-size: calc(100vw * 36 / 800);
+    text-align: center;
+    white-space: nowrap;
   }
 
   #sec2 .sec2-service-desc {
+    grid-row: 5;
     width: 100%;
-    max-width: none;
+    max-width: calc(100vw * 640 / 800);
+    margin: 0 auto calc(100vw * 28 / 800);
+    font-size: calc(100vw * 24 / 800);
+    text-align: center;
+    word-break: keep-all;
+  }
+
+  #sec2 .sec2-detail-btn {
+    grid-row: 6;
+    justify-self: center;
+    width: calc(100vw * 236 / 800);
+    height: calc(100vw * 76 / 800);
+    padding: 0;
+    font-size: calc(100vw * 24 / 800);
+    border-radius: calc(100vw * 38 / 800);
   }
 
   #sec2 .sec2-tabs {
-    position: relative;
-    top: auto;
-    left: auto;
+    grid-row: 7;
+    position: static;
     width: 100%;
-    margin-top: 28px;
-    flex-wrap: wrap;
+    margin-top: calc(100vw * 38 / 800);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: calc(100vw * 14 / 800);
   }
 
   #sec2 .sec2-tabs li {
-    flex: 1 1 calc(50% - 6.5px);
-    min-width: calc(50% - 6.5px);
+    flex: none;
+    min-width: 0;
   }
 
   #sec2 .sec2-tabs li button {
-    height: 110px;
+    width: 100%;
+    height: auto;
+    font-size: calc(100vw * 22 / 800);
+    border-radius: calc(100vw * 16 / 800);
   }
 
   #sec3 {
@@ -2393,14 +2624,34 @@ img {
   }
 
   #sec3 .sec3-card-list {
+    --sec3-card-aspect-ratio: 12 / 5;
+    --sec3-card-active-aspect-ratio: 9 / 5;
     width: 100%;
     flex-direction: column;
   }
 
   #sec3 .sec3-card,
   #sec3 .sec3-card--experience {
-    flex: 1 1 auto;
-    min-height: 320px;
+    flex: none;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: var(--sec3-card-aspect-ratio);
+  }
+
+  #sec3 .sec3-card.is-active,
+  #sec3 .sec3-card-list:hover .sec3-card:hover,
+  #sec3 .sec3-card-list:focus-within .sec3-card:focus-visible {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: var(--sec3-card-active-aspect-ratio);
+  }
+
+  #sec3 .sec3-card-list:hover .sec3-card,
+  #sec3 .sec3-card-list:focus-within .sec3-card {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: var(--sec3-card-aspect-ratio);
   }
 
   #sec3 .sec3-card-copy,
@@ -2413,37 +2664,102 @@ img {
   }
 
   #sec4 .sec4-inner {
-    gap: 36px;
+    width: calc(100% - calc(100vw * 80 / 800));
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: stretch;
+    row-gap: 44px;
   }
 
   #sec4 .sec4-quote {
+    width: 100%;
     margin-top: 28px;
+    margin-left: 0;
     font-size: 30px;
+    white-space: normal;
+    word-break: keep-all;
   }
 
   #sec4 .sec4-highlight {
-    margin-top: 44px;
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
     font-size: 32px;
+    flex-wrap: wrap;
+    white-space: normal;
+    line-height: 1.25;
+  }
+
+  #sec4 .sec4-highlight span {
+    white-space: normal;
+  }
+
+  #sec4 .sec4-doctor {
+    width: 100%;
+    white-space: normal;
   }
 
   #sec4 .sec4-doctor strong {
-    font-size: 44px;
+    font-size: inherit;
+  }
+
+  #sec4 .sec4-desc {
+    width: 100%;
+    white-space: normal;
+    word-break: keep-all;
   }
 
   #sec4 .sec4-visual {
     width: 100%;
-    height: 420px;
+    max-width: none;
+    height: auto;
+    aspect-ratio: 720 / 446;
     border-radius: 24px;
+    background-position: center 24%;
   }
 
   #sec5 {
+    min-height: calc(100vw * 1148 / 800);
     height: auto;
-    min-height: auto;
-    padding: 72px 0 0;
+    padding: calc(100vw * 108 / 800) 0 0;
   }
 
   #sec5 .sec5-inner {
-    width: min(calc(100% - 40px), 1380px);
+    width: 100%;
+  }
+
+  #sec5 .sec5-head {
+    width: calc(100% - calc(100vw * 92 / 800));
+    max-width: none;
+  }
+
+  #sec5 .sec5-kicker {
+    font-size: calc(100vw * 26 / 800);
+  }
+
+  #sec5 .sec5-title {
+    margin-top: calc(100vw * 36 / 800);
+    font-size: calc(100vw * 64 / 800);
+    line-height: 1.08;
+    letter-spacing: calc(100vw * -2 / 800);
+  }
+
+  #sec5 .sec5-desc {
+    width: calc(100% - calc(100vw * 92 / 800));
+    max-width: calc(100vw * 700 / 800);
+    margin-top: calc(100vw * 34 / 800);
+    font-size: calc(100vw * 20 / 800);
+    line-height: 1.55;
+    word-break: keep-all;
+  }
+
+  #sec5 .sec5-detail-btn {
+    width: calc(100vw * 222 / 800);
+    height: calc(100vw * 70 / 800);
+    margin-top: calc(100vw * 40 / 800);
+    padding: 0;
+    border-radius: calc(100vw * 35 / 800);
+    font-size: calc(100vw * 23 / 800);
   }
 
   #sec6 .sec6-inner {
@@ -2451,45 +2767,47 @@ img {
   }
 
   #sec5 .sec5-stage {
-    position: absolute;
+    position: relative;
     left: 50%;
-    top: 130px;
+    top: auto;
     bottom: auto;
     transform: translateX(-50%);
-    width: 860px;
-    height: calc(860px * 816 / 980);
-    margin: 0;
+    width: calc(100vw * 940 / 800);
+    max-width: none;
+    height: auto;
+    aspect-ratio: 980 / 816;
+    margin: calc(100vw * 54 / 800) 0 0;
   }
 
-  #sec5 .sec5-machine--1 {
+  #sec5 .sec5-machine--left {
     left: calc(100% * 30 / 980);
     top: 0;
     width: calc(100% * 359 / 980);
     height: 100%;
   }
 
-  #sec5 .sec5-machine--2 {
+  #sec5 .sec5-machine--center {
     left: calc(100% * 273 / 980);
     top: calc(100% * 52 / 816);
     width: calc(100% * 312 / 980);
     height: calc(100% * 688 / 816);
   }
 
-  #sec5 .sec5-machine--3 {
+  #sec5 .sec5-machine--right-front {
     left: calc(100% * 464 / 980);
     top: calc(100% * 69 / 816);
     width: calc(100% * 325 / 980);
     height: calc(100% * 717 / 816);
   }
 
-  #sec5 .sec5-machine--4 {
+  #sec5 .sec5-machine--right-back {
     left: calc(100% * 618 / 980);
     top: calc(100% * 66 / 816);
     width: calc(100% * 336 / 980);
     height: calc(100% * 741 / 816);
   }
 
-  #sec5 .sec5-machine-light {
+  #sec5 .sec5-flare {
     left: calc(100% * 744 / 980);
     top: calc(100% * 186 / 816);
     width: calc(100% * 424 / 980);
