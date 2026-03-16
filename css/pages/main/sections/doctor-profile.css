@@ -38,7 +38,7 @@
   margin-top: clamp(34px, 2.8646vw, 55px);
   margin-left: clamp(-8px, -0.4167vw, -1px);
   font-family: "Noto Serif KR", serif;
-  font-size: clamp(28px, 1.875vw, 36px);
+  font-size: var(--main-subtitle-font-size);
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.9px;
@@ -53,7 +53,7 @@
   display: inline-flex;
   align-items: center;
   gap: clamp(10px, 0.8333vw, 16px);
-  font-size: clamp(28px, 1.875vw, 36px);
+  font-size: var(--main-subtitle-font-size);
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.9px;
@@ -84,7 +84,7 @@
 #sec4 .sec4-doctor {
   width: min(100%, 219px);
   margin-top: clamp(12px, 0.9375vw, 18px);
-  font-size: clamp(28px, 1.875vw, 36px);
+  font-size: var(--main-subtitle-font-size);
   font-weight: 300;
   line-height: normal;
   letter-spacing: -0.9px;
@@ -138,4 +138,3 @@
   background: url("../../../../assets/images/main/sec4_visual.png") no-repeat center / auto 100%;
   box-shadow: 0 30px 70px rgba(16, 32, 45, 0.08);
 }
-

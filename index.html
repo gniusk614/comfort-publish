@@ -15,12 +15,19 @@
     <div class="header-area">
       <header class="header">
         <div class="inner">
+          <a href="#mv" class="header-mobile-home" aria-label="메인으로 이동">
+            <svg class="header-mobile-home-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.25 10.75 12 4.5l7.75 6.25V19a1.25 1.25 0 0 1-1.25 1.25h-4.2v-5.7h-4.6v5.7H5.5A1.25 1.25 0 0 1 4.25 19z" />
+            </svg>
+          </a>
           <h1 class="logo">
             <a href="#">
               <img src="./assets/images/common/logo-comfort.png" alt="컴포트 성형외과" />
             </a>
           </h1>
-          <button type="button" class="btn-menu" aria-label="메뉴 열기">Menu</button>
+          <button type="button" class="btn-menu" aria-label="메뉴 열기" aria-controls="mobileMenuPanel" aria-expanded="false">
+            <span class="btn-menu-line" aria-hidden="true"></span>
+          </button>
           <nav class="gnb" aria-label="주 메뉴">
             <ul class="gnb-list">
               <li class="gnb-item gnb-intro is-active" data-menu="intro"><a href="#">컴포트 소개</a></li>
@@ -38,6 +45,10 @@
           </div>
         </div>
       </div>
+      <button type="button" class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-label="메뉴 닫기" hidden></button>
+      <nav class="mobile-menu-panel" id="mobileMenuPanel" aria-label="모바일 메뉴" hidden>
+        <div class="mobile-menu-groups" id="mobileMenuGroups"></div>
+      </nav>
     </div>
 
     <main class="container page-main">
@@ -55,11 +66,11 @@
 
       <section id="sec2" class="page-section section--main-tattoo-overview">
         <div class="sec2-layer">
-          <div class="sec2-image-wrap">
+          <div class="sec2-image-wrap" data-reveal data-reveal-delay="0ms">
             <div class="sec2-treatment-image"></div>
           </div>
 
-          <div class="sec2-logo-badge">
+          <div class="sec2-logo-badge" data-reveal data-reveal-delay="120ms">
             <img src="./assets/images/main/comfort-symbol-mark.png" alt="컴포트 심볼 로고" class="sec2-logo-mark" />
             <svg class="sec2-logo-ring" viewBox="0 0 144 150" aria-hidden="true">
               <defs>
@@ -74,8 +85,8 @@
           </div>
 
           <div class="sec2-title-block">
-            <p class="sec2-title-kicker" id="sec2Kicker">COMFORT PS: Tattoo Removal</p>
-            <h3 class="sec2-title-main">
+            <p class="sec2-title-kicker" id="sec2Kicker" data-reveal data-reveal-delay="0ms">COMFORT PS: Tattoo Removal</p>
+            <h3 class="sec2-title-main" data-reveal data-reveal-delay="90ms">
               <span class="sec2-title-main-marquee" id="sec2MainTitleMarquee">
                 <span class="sec2-title-main-track" id="sec2MainTitle">
                   <span class="sec2-title-main-piece">통증은 줄이고</span>
@@ -87,16 +98,16 @@
                 </span>
               </span>
             </h3>
-            <strong class="sec2-service-title" id="sec2ServiceTitle">피코 문신제거</strong>
-            <p class="sec2-service-desc" id="sec2ServiceDesc">피코레이저로 문신에 맞춰 효과적이고 세밀한 시술이 가능합니다.</p>
-            <a href="#" class="sec2-detail-btn">자세히 보기
+            <strong class="sec2-service-title" id="sec2ServiceTitle" data-reveal data-reveal-delay="180ms">피코 문신제거</strong>
+            <p class="sec2-service-desc" id="sec2ServiceDesc" data-reveal data-reveal-delay="240ms">피코레이저로 문신에 맞춰 효과적이고 세밀한 시술이 가능합니다.</p>
+            <a href="#" class="sec2-detail-btn" data-reveal data-reveal-delay="300ms">자세히 보기
               <svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M5 12H19" />
                 <path d="M13 6L19 12L13 18" />
               </svg>
             </a>
 
-            <ul class="sec2-tabs" id="sec2Tabs">
+            <ul class="sec2-tabs" id="sec2Tabs" data-reveal data-reveal-delay="360ms">
               <li class="is-active"><button type="button" data-tab="pico"><span class="sec2-tab-label">피코<br>문신제거</span></button></li>
               <li><button type="button" data-tab="semi"><span class="sec2-tab-label">반영구<br>문신제거</span></button></li>
               <li><button type="button" data-tab="scalp"><span class="sec2-tab-label">두피<br>문신제거</span></button></li>
@@ -108,14 +119,14 @@
 
       <section id="sec3" class="page-section section--main-feature-highlights">
         <div class="sec3-inner">
-          <div class="sec3-head">
+          <div class="sec3-head" data-reveal data-reveal-delay="0ms">
             <p class="sec3-kicker">COMFORT PS: Tattoo Removal</p>
             <h3 class="sec3-title">컴포트만의 특별한 문신제거</h3>
             <p class="sec3-desc">독보적인 경력과 수많은 시술 케이스, 최신 첨단 의료기기로 만족도 높은 결과를 제공합니다.</p>
           </div>
 
           <div class="sec3-card-list">
-            <article class="sec3-card sec3-card--experience is-active" tabindex="0">
+            <article class="sec3-card sec3-card--experience is-active" tabindex="0" data-reveal data-reveal-delay="80ms">
               <div class="sec3-card-copy">
                 <p class="sec3-card-en">Unparalleled Experience</p>
                 <strong class="sec3-card-title">독보적인 경력</strong>
@@ -123,7 +134,7 @@
               </div>
             </article>
 
-            <article class="sec3-card sec3-card--pain-care" tabindex="0">
+            <article class="sec3-card sec3-card--pain-care" tabindex="0" data-reveal data-reveal-delay="160ms">
               <div class="sec3-card-copy">
                 <p class="sec3-card-en">Pain Care System</p>
                 <strong class="sec3-card-title">통증 케어 시스템</strong>
@@ -131,7 +142,7 @@
               </div>
             </article>
 
-            <article class="sec3-card sec3-card--pico-laser" tabindex="0">
+            <article class="sec3-card sec3-card--pico-laser" tabindex="0" data-reveal data-reveal-delay="240ms">
               <div class="sec3-card-copy">
                 <p class="sec3-card-en">The Latest Pico Laser</p>
                 <strong class="sec3-card-title">최신 피코레이저</strong>
@@ -139,7 +150,7 @@
               </div>
             </article>
 
-            <article class="sec3-card sec3-card--custom-care" tabindex="0">
+            <article class="sec3-card sec3-card--custom-care" tabindex="0" data-reveal data-reveal-delay="320ms">
               <div class="sec3-card-copy">
                 <p class="sec3-card-en">Customized System</p>
                 <strong class="sec3-card-title">맞춤 진료 시스템</strong>
@@ -152,14 +163,14 @@
 
       <section id="sec4" class="page-section section--main-doctor-profile">
         <div class="sec4-inner">
-          <div class="sec4-copy sec4-copy--top">
+          <div class="sec4-copy sec4-copy--top" data-reveal data-reveal-delay="0ms">
             <p class="sec4-kicker">COMFORT PS: Minimizing Pain</p>
             <h3 class="sec4-quote">“통증이 두려운 당신을 위한 문신제거”</h3>
           </div>
 
-          <div class="sec4-visual" aria-hidden="true"></div>
+          <div class="sec4-visual" aria-hidden="true" data-reveal data-reveal-delay="120ms"></div>
 
-          <div class="sec4-copy sec4-copy--bottom">
+          <div class="sec4-copy sec4-copy--bottom" data-reveal data-reveal-delay="220ms">
             <p class="sec4-highlight">
               <span>성형외과</span>
               <svg class="sec4-highlight-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -182,7 +193,7 @@
 
       <section id="sec5" class="page-section section--main-laser-showcase">
         <div class="sec5-inner">
-          <div class="sec5-head">
+          <div class="sec5-head" data-reveal data-reveal-delay="0ms">
             <p class="sec5-kicker">Tattoo Removal: Pico Laser</p>
             <h3 class="sec5-title">피코 레이저</h3>
             <p class="sec5-desc">다양한 파장의 최신 피코레이저를 통해 빠르고 정밀한 시술을 제공하여 보다 효과적인 문신 제거가 가능합니다.</p>
@@ -194,7 +205,7 @@
             </a>
           </div>
 
-          <div class="sec5-stage" aria-hidden="true">
+          <div class="sec5-stage" aria-hidden="true" data-reveal data-reveal-delay="140ms">
             <div class="sec5-machine sec5-machine--left">
               <img src="./assets/images/main/pico-laser-machine-left.png" alt="" />
             </div>
@@ -214,13 +225,13 @@
 
       <section id="sec6" class="page-section section--main-aftercare">
         <div class="sec6-inner">
-          <div class="sec6-head">
+          <div class="sec6-head" data-reveal data-reveal-delay="0ms">
             <p class="sec6-kicker">Post-Treatment Care System</p>
             <h3 class="sec6-title">시술 후까지 책임지는 케어 시스템</h3>
           </div>
 
           <div class="sec6-card-list">
-            <article class="sec6-card sec6-card--kit is-active" tabindex="0">
+            <article class="sec6-card sec6-card--kit is-active" tabindex="0" data-reveal data-reveal-delay="80ms">
               <strong class="sec6-card-label">맞춤 드레싱키트 제공</strong>
               <div class="sec6-card-visual">
                 <div class="sec6-card-overlay">
@@ -230,7 +241,7 @@
               </div>
             </article>
 
-            <article class="sec6-card sec6-card--consult" tabindex="0">
+            <article class="sec6-card sec6-card--consult" tabindex="0" data-reveal data-reveal-delay="160ms">
               <strong class="sec6-card-label">시술 문의 상시 상담</strong>
               <div class="sec6-card-visual">
                 <div class="sec6-card-overlay">
@@ -240,7 +251,7 @@
               </div>
             </article>
 
-            <article class="sec6-card sec6-card--aftercare" tabindex="0">
+            <article class="sec6-card sec6-card--aftercare" tabindex="0" data-reveal data-reveal-delay="240ms">
               <strong class="sec6-card-label">내원 시 추가 관리</strong>
               <div class="sec6-card-visual">
                 <div class="sec6-card-overlay">
@@ -259,12 +270,12 @@
       <section class="sec7-results">
         <div class="sec7-results-inner">
           <div class="sec7-results-head">
-            <div class="sec7-results-copy">
+            <div class="sec7-results-copy" data-reveal data-reveal-delay="0ms">
               <p class="sec7-results-kicker">Tattoo Removal: Before &amp; After</p>
               <h3 class="sec7-results-title">문신제거 결과를 확인해 보세요.</h3>
             </div>
 
-            <div class="sec7-results-actions">
+            <div class="sec7-results-actions" data-reveal data-reveal-delay="220ms">
               <div class="sec7-results-nav">
                 <button type="button" class="sec7-results-arrow sec7-results-arrow--prev" id="sec7Prev" aria-label="이전 결과 보기">
                   <svg class="sec7-results-arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -286,7 +297,7 @@
             </div>
           </div>
 
-          <div class="sec7-results-carousel" id="sec7Carousel" data-api-url="">
+          <div class="sec7-results-carousel" id="sec7Carousel" data-api-url="" data-reveal data-reveal-delay="120ms">
             <div class="sec7-results-track" id="sec7Track"></div>
           </div>
         </div>
@@ -294,7 +305,7 @@
 
       <section class="sec7-route">
         <div class="sec7-route-inner">
-          <div class="sec7-route-copy">
+          <div class="sec7-route-copy" data-reveal data-reveal-delay="0ms">
             <h3 class="sec7-route-title">오시는 길</h3>
             <p class="sec7-route-address">서울시 강남구 테헤란로 105 (역삼동, 822-1) A타워 2층 (강남역 12번 출구)</p>
 
@@ -344,7 +355,7 @@
             <p class="sec7-route-note">*점심시간 없이 진료 / 일요일, 공휴일 휴무</p>
           </div>
 
-          <div class="sec7-route-map">
+          <div class="sec7-route-map" data-reveal data-reveal-delay="140ms">
             <iframe
               title="컴포트 성형외과 위치"
               src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%ED%85%8C%ED%97%A4%EB%9E%80%EB%A1%9C%20105&t=&z=16&ie=UTF8&iwloc=&output=embed"
@@ -385,6 +396,7 @@
   <script src="./js/data/site-map.js"></script>
   <script src="./js/data/pages/main.js"></script>
   <script src="./js/common/header-menu.js"></script>
+  <script src="./js/common/scroll-reveal.js"></script>
   <script src="./js/pages/main/sec2-tabs.js"></script>
   <script src="./js/pages/main/sec3-cards.js"></script>
   <script src="./js/pages/main/sec7-results.js"></script>

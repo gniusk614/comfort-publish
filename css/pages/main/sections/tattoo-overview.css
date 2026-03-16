@@ -118,7 +118,7 @@
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
   font-family: "Noto Serif KR", serif;
-  font-size: clamp(28px, 3.125vw, 60px);
+  font-size: var(--main-display-font-size);
   font-weight: 400;
   letter-spacing: -3px;
   text-align: left;
@@ -157,7 +157,7 @@
   width: auto;
   height: auto;
   margin: clamp(18px, 1.6667vw, 32px) 0 clamp(10px, 0.8333vw, 16px);
-  font-size: clamp(24px, 3.75vw, 48px);
+  font-size: var(--main-emphasis-font-size);
   font-weight: 700;
   line-height: normal;
   letter-spacing: -1px;

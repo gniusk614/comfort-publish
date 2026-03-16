@@ -295,7 +295,7 @@
 #sec7 .sec7-route-title {
   width: 129px;
   max-width: 100%;
-  font-size: 36px;
+  font-size: var(--main-subtitle-font-size);
   font-weight: 700;
   line-height: normal;
   letter-spacing: normal;
@@ -306,7 +306,7 @@
 #sec7 .sec7-route-address {
   width: min(100%, 593px);
   margin-top: clamp(20px, 1.4583vw, 28px);
-  font-size: clamp(16px, 1.0417vw, 20px);
+  font-size: var(--main-route-body-font-size);
   line-height: normal;
   color: #fff;
   word-break: keep-all;

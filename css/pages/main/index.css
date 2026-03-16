@@ -2,6 +2,16 @@
   min-width: 320px;
 }
 
+.page--main {
+  --main-kicker-font-size: clamp(16px, calc(11px + 0.68vw), 24px);
+  --main-title-font-size: clamp(32px, calc(26px + 1.35vw), 52px);
+  --main-emphasis-font-size: clamp(22px, calc(13px + 1.8vw), 48px);
+  --main-body-font-size: clamp(15px, calc(8.5px + 0.95vw), 26px);
+  --main-subtitle-font-size: clamp(24px, calc(18px + 0.95vw), 36px);
+  --main-display-font-size: clamp(30px, calc(12px + 2.5vw), 60px);
+  --main-route-body-font-size: clamp(15px, calc(10px + 0.55vw), 20px);
+}
+
 .page-main {
   display: block;
 }
@@ -17,7 +27,7 @@
 #sec6 .sec6-kicker,
 #sec7 .sec7-results-kicker {
   font-family: "Philosopher", serif;
-  font-size: clamp(18px, 1.25vw, 24px);
+  font-size: var(--main-kicker-font-size);
   font-weight: 400;
   line-height: 1.2;
   color: #176eae;
@@ -25,7 +35,7 @@
 
 #sec2 .sec2-service-title,
 #sec4 .sec4-highlight {
-  font-size: clamp(24px, 3.75vw, 48px);
+  font-size: var(--main-emphasis-font-size);
   font-weight: 700;
 }
 
@@ -34,7 +44,7 @@
 #sec4 .sec4-desc,
 #sec5 .sec5-desc,
 #sec6 .sec6-card-overlay-desc {
-  font-size: clamp(16px, 3.5vw, 28px);
+  font-size: var(--main-body-font-size);
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: normal;
@@ -44,7 +54,7 @@
 #sec5 .sec5-title,
 #sec6 .sec6-title,
 #sec7 .sec7-results-title {
-  font-size: clamp(34px, 6.5vw, 52px);
+  font-size: var(--main-title-font-size);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -1.3px;

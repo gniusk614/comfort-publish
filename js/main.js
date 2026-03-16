@@ -6,10 +6,14 @@ $(function () {
 
   if (typeof modules.initHeaderMenu === "function") {
     modules.initHeaderMenu({
+      headerArea: $(".header-area"),
       menuButton: $(".btn-menu"),
-      gnb: $(".gnb"),
+      mobileHome: $(".header-mobile-home"),
       gnbItems: $(".gnb-item"),
       quickMenu: $("#headerQuickMenu"),
+      mobileMenuBackdrop: $("#mobileMenuBackdrop"),
+      mobileMenuPanel: $("#mobileMenuPanel"),
+      mobileMenuGroups: $("#mobileMenuGroups"),
       navigationMenus: siteMap.navigationMenus,
       defaultMenuKey: "intro"
     });
@@ -42,6 +46,13 @@ $(function () {
       prevButton: $("#sec7Prev"),
       nextButton: $("#sec7Next"),
       fallbackResults: mainPage.sec7FallbackResults
+    });
+  }
+
+  if (typeof modules.initScrollReveal === "function") {
+    modules.initScrollReveal({
+      root: document,
+      selector: "[data-reveal]"
     });
   }
 });
