@@ -591,7 +591,7 @@
   .mobile-menu-toggle {
     min-height: calc(100vw * 104 / 800);
     padding: 0 calc(100vw * 40 / 800);
-    font-size: calc(100vw * 21 / 800);
+    font-size: calc(100vw * 36 / 800);
   }
 
   .mobile-menu-toggle-icon {
@@ -602,7 +602,7 @@
   .mobile-menu-link {
     min-height: calc(100vw * 90 / 800);
     padding: 0 calc(100vw * 40 / 800);
-    font-size: calc(100vw * 18 / 800);
+    font-size: calc(100vw * 28 / 800);
   }
 }
 
